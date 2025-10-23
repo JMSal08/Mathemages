@@ -1,0 +1,214 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4klngq3w5x7u"]
+
+[ext_resource type="Script" uid="uid://n36a6o2m0bxr" path="res://scripts/options_menu.gd" id="1_hm4m4"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://bg/mainmenu_bg.jpg" id="2_hm4m4"]
+[ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_3xsyx"]
+[ext_resource type="Script" uid="uid://6hwua0qmo0rm" path="res://scripts/audio/options/master_volume_slider.gd" id="4_3xsyx"]
+[ext_resource type="Script" uid="uid://by24qc3q1yfce" path="res://scripts/audio/options/sound_volume_slider.gd" id="5_dhn0l"]
+[ext_resource type="Script" uid="uid://6s5a6glxltw0" path="res://scripts/audio/options/music_volume_slider.gd" id="5_k61yy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1lix"]
+texture = ExtResource("2_hm4m4")
+expand_margin_top = 200.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lbr8e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hm4m4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfjc7"]
+
+[node name="Options_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hm4m4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t1lix")
+
+[node name="MainMenuBtn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 808.0
+offset_top = 1000.0
+offset_right = -808.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lbr8e")
+text = "Main Menu"
+
+[node name="OptionsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 32.0
+offset_right = 1080.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+
+[node name="OptionsPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = -64.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScreenOptions" type="OptionButton" parent="Panel/OptionsPanel"]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 104.0
+offset_right = 1664.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+selected = 0
+item_count = 2
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+
+[node name="MasterVolume" type="Panel" parent="Panel/OptionsPanel"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -128.0
+offset_right = -24.0
+offset_bottom = -88.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hm4m4")
+
+[node name="MasterVolumeValue" type="Label" parent="Panel/OptionsPanel/MasterVolume"]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 192.0
+offset_right = 896.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "100%"
+horizontal_alignment = 2
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Panel/OptionsPanel/MasterVolume"]
+layout_mode = 1
+offset_left = 128.0
+offset_top = 264.0
+offset_right = 896.0
+offset_bottom = 288.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("4_3xsyx")
+
+[node name="MasterVolumeLabel" type="Label" parent="Panel/OptionsPanel/MasterVolume"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 531.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "Master Volume:"
+
+[node name="MusicVolume" type="Panel" parent="Panel/OptionsPanel"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 64.0
+offset_right = -24.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hm4m4")
+
+[node name="MusicVolumeValue" type="Label" parent="Panel/OptionsPanel/MusicVolume"]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 192.0
+offset_right = 896.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "100%"
+horizontal_alignment = 2
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Panel/OptionsPanel/MusicVolume"]
+layout_mode = 1
+offset_left = 128.0
+offset_top = 264.0
+offset_right = 896.0
+offset_bottom = 288.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_k61yy")
+
+[node name="MusicVolumeLabel" type="Label" parent="Panel/OptionsPanel/MusicVolume"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 531.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "Music Volume:"
+
+[node name="SoundVolume" type="Panel" parent="Panel/OptionsPanel"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 256.0
+offset_right = -16.0
+offset_bottom = 296.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lfjc7")
+
+[node name="SoundVolumeValue" type="Label" parent="Panel/OptionsPanel/SoundVolume"]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 192.0
+offset_right = 896.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "100%"
+horizontal_alignment = 2
+
+[node name="SoundVolumeSlider" type="HSlider" parent="Panel/OptionsPanel/SoundVolume"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 264.0
+offset_right = 896.0
+offset_bottom = 288.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_dhn0l")
+
+[node name="SoundVolumeLabel" type="Label" parent="Panel/OptionsPanel/SoundVolume"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 531.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_3xsyx")
+theme_override_font_sizes/font_size = 60
+text = "Sound Volume:"
+
+[connection signal="pressed" from="Panel/MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
+[connection signal="item_selected" from="Panel/OptionsPanel/ScreenOptions" to="." method="_on_screen_options_item_selected"]
+[connection signal="ready" from="Panel/OptionsPanel/ScreenOptions" to="." method="_on_option_button_ready"]
+[connection signal="value_changed" from="Panel/OptionsPanel/MasterVolume/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="Panel/OptionsPanel/MusicVolume/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="Panel/OptionsPanel/SoundVolume/SoundVolumeSlider" to="." method="_on_sound_volume_slider_value_changed"]

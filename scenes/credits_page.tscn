@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhpyoagru4vyw"]
+
+[ext_resource type="Script" uid="uid://dp0om0fg5yjmy" path="res://scripts/credits_page.gd" id="1_o58sn"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://bg/mainmenu_bg.jpg" id="2_o58sn"]
+[ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_3tdve"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkybi"]
+texture = ExtResource("2_o58sn")
+expand_margin_top = 200.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqq10"]
+
+[node name="credits_page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o58sn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dkybi")
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 1000.0
+offset_right = 1112.0
+offset_bottom = 1069.0
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_3tdve")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eqq10")
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]

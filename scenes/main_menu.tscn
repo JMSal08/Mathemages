@@ -1,0 +1,306 @@
+[gd_scene load_steps=17 format=3 uid="uid://bwky1ymobsq55"]
+
+[ext_resource type="Script" uid="uid://cssbeaceyslnj" path="res://scripts/mainmenuscript.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://bg/mainmenu_bg.jpg" id="2_bqqt6"]
+[ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dnowkvgxqbqjf" path="res://img/logo/logo.svg" id="4_wu84c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ig7tw"]
+texture = ExtResource("2_bqqt6")
+expand_margin_top = 200.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtw2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oa1go"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbmy8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk1qb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xm2m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu84c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ln24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqqt6"]
+
+[sub_resource type="Animation" id="Animation_wu84c"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopupImg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1216, 440)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PopupImg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ln24"]
+resource_name = "slide"
+length = 0.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopupImg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(704, 120), Vector2(704, 56.000004)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PopupImg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rtw2f"]
+_data = {
+&"RESET": SubResource("Animation_wu84c"),
+&"slide": SubResource("Animation_8ln24")
+}
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="Homescreen" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ig7tw")
+
+[node name="TitleLogo" type="TextureRect" parent="Homescreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -992.0
+offset_top = 8.0
+offset_right = 208.0
+offset_bottom = 608.0
+grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_wu84c")
+
+[node name="VersionLabel" type="Label" parent="Homescreen"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 1.0020001
+offset_left = 1584.0
+offset_top = 1032.0
+offset_right = 0.9199219
+offset_bottom = -0.16015625
+mouse_filter = 0
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 36
+text = "Game Version Here"
+horizontal_alignment = 2
+
+[node name="VersionButton" type="Button" parent="Homescreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1584.0
+offset_top = 1024.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rtw2f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_oa1go")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tbmy8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jk1qb")
+text = "Game Version Here"
+alignment = 2
+
+[node name="CopyrightLabel" type="Label" parent="Homescreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 1.0020001
+offset_top = 1032.0
+offset_right = -1583.0801
+offset_bottom = -0.16015625
+mouse_filter = 0
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 36
+text = "©PerformativeGames"
+
+[node name="PopupImg" type="TextureRect" parent="Homescreen"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 440.0
+offset_right = 1480.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 2
+
+[node name="VBoxButtons" type="VBoxContainer" parent="Homescreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 320.0
+offset_right = -1400.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="PlayBtn" type="Button" parent="Homescreen/VBoxButtons"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
+text = "Play"
+
+[node name="OptionsBtn" type="Button" parent="Homescreen/VBoxButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
+text = "Options
+"
+
+[node name="CreditsBtn" type="Button" parent="Homescreen/VBoxButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
+text = "Credits"
+
+[node name="ScoreBtn" type="Button" parent="Homescreen/VBoxButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
+text = "Score
+"
+
+[node name="ExitBtn" type="Button" parent="Homescreen/VBoxButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
+text = "Exit
+"
+
+[node name="VBoxArrows" type="VBoxContainer" parent="Homescreen"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 320.0
+offset_right = 520.0
+offset_bottom = 870.0
+mouse_filter = 2
+theme_override_constants/separation = 60
+
+[node name="ArrowsPlay" type="Label" parent="Homescreen/VBoxArrows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="ArrowsOptions" type="Label" parent="Homescreen/VBoxArrows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="ArrowsCredits" type="Label" parent="Homescreen/VBoxArrows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="ArrowsScore" type="Label" parent="Homescreen/VBoxArrows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="ArrowsExit" type="Label" parent="Homescreen/VBoxArrows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="PopupPlayer" type="AnimationPlayer" parent="Homescreen"]
+libraries = {
+&"": SubResource("AnimationLibrary_rtw2f")
+}
+
+[connection signal="ready" from="Homescreen/VersionLabel" to="." method="_on_versionlabel_ready"]
+[connection signal="pressed" from="Homescreen/VersionButton" to="." method="_on_version_button_pressed"]
+[connection signal="ready" from="Homescreen/VersionButton" to="." method="_on_version_button_ready"]
+[connection signal="mouse_entered" from="Homescreen/VBoxButtons/PlayBtn" to="." method="_on_play_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Homescreen/VBoxButtons/PlayBtn" to="." method="_on_play_btn_mouse_exited"]
+[connection signal="pressed" from="Homescreen/VBoxButtons/PlayBtn" to="." method="_on_playbtn_pressed"]
+[connection signal="mouse_entered" from="Homescreen/VBoxButtons/OptionsBtn" to="." method="_on_options_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Homescreen/VBoxButtons/OptionsBtn" to="." method="_on_options_btn_mouse_exited"]
+[connection signal="pressed" from="Homescreen/VBoxButtons/OptionsBtn" to="." method="_on_optionsbtn_pressed"]
+[connection signal="mouse_entered" from="Homescreen/VBoxButtons/CreditsBtn" to="." method="_on_credits_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Homescreen/VBoxButtons/CreditsBtn" to="." method="_on_credits_btn_mouse_exited"]
+[connection signal="pressed" from="Homescreen/VBoxButtons/CreditsBtn" to="." method="_on_creditsbtn_pressed"]
+[connection signal="mouse_entered" from="Homescreen/VBoxButtons/ScoreBtn" to="." method="_on_score_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Homescreen/VBoxButtons/ScoreBtn" to="." method="_on_score_btn_mouse_exited"]
+[connection signal="pressed" from="Homescreen/VBoxButtons/ScoreBtn" to="." method="_on_scorebtn_pressed"]
+[connection signal="mouse_entered" from="Homescreen/VBoxButtons/ExitBtn" to="." method="_on_exit_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Homescreen/VBoxButtons/ExitBtn" to="." method="_on_exit_btn_mouse_exited"]
+[connection signal="pressed" from="Homescreen/VBoxButtons/ExitBtn" to="." method="_on_exitbtn_pressed"]
+[connection signal="ready" from="Homescreen/VBoxButtons/ExitBtn" to="." method="_on_exit_btn_ready"]
+[connection signal="ready" from="Homescreen/VBoxArrows/ArrowsExit" to="." method="_on_arrows_exit_ready"]
