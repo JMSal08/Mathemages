@@ -1,6 +1,6 @@
 extends Control
 
-var version = "ALPHA 0.1"
+var version = "DEV 0.1"
 var webver = version + " (Web Edition)"
 var platform = OS.get_name()
 
