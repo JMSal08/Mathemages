@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://drvw8rx0ewhmw"]
 
 [ext_resource type="Script" uid="uid://d2ty8484dn337" path="res://scripts/score_page.gd" id="1_f676s"]
-[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://img/bg/mainmenu_bg.jpg" id="2_f676s"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_f676s"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_ho5uq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orxdc"]

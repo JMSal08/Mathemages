@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddrr0p44tmk55"]
 
 [ext_resource type="Script" uid="uid://bv7uoo3thloga" path="res://scripts/splash/studio_splash.gd" id="1_ct7m6"]
-[ext_resource type="Texture2D" uid="uid://dfue4ri5k10eb" path="res://img/logo/studio_logo.svg" id="2_goq6a"]
+[ext_resource type="Texture2D" uid="uid://dfue4ri5k10eb" path="res://images/logo/studio_logo.svg" id="2_goq6a"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_goq6a"]
 
 [sub_resource type="Animation" id="Animation_o2afc"]

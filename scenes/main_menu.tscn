@@ -1,15 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://bwky1ymobsq55"]
 
 [ext_resource type="Script" uid="uid://cssbeaceyslnj" path="res://scripts/mainmenuscript.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://img/bg/mainmenu_bg.jpg" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_bqqt6"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dnowkvgxqbqjf" path="res://images/logo/logo.svg" id="3_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ig7tw"]
 texture = ExtResource("2_bqqt6")
 expand_margin_top = 200.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bqqt6"]
-load_path = "res://.godot/imported/logo.svg-e2ffae26e3d0c78fc1632bfad9dcc69c.ctex"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtw2f"]
 
@@ -118,7 +116,7 @@ offset_right = 208.0
 offset_bottom = 608.0
 grow_horizontal = 2
 scale = Vector2(0.7, 0.7)
-texture = SubResource("CompressedTexture2D_bqqt6")
+texture = ExtResource("3_wu84c")
 
 [node name="VersionLabel" type="Label" parent="Homescreen"]
 visible = false

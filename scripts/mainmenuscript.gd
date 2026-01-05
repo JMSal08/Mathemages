@@ -42,7 +42,7 @@ func _on_exit_btn_ready() -> void:
 func _on_play_btn_mouse_entered() -> void:
 	var ArrowsPlay = $Homescreen/VBoxArrows/ArrowsPlay
 	ArrowsPlay.text = show_arrows
-	PopupImg.set_texture(load("res://img/main_menu/play.svg"))
+	PopupImg.set_texture(load("res://images/main_menu/play.svg"))
 	PopupImg.scale = Vector2(0.7,0.7)
 	PopupPlayer.play("RESET")
 	PopupPlayer.play("slide")
@@ -50,7 +50,7 @@ func _on_play_btn_mouse_entered() -> void:
 func _on_options_btn_mouse_entered() -> void:
 	var ArrowsOptions = $Homescreen/VBoxArrows/ArrowsOptions
 	ArrowsOptions.text = show_arrows
-	PopupImg.set_texture(load("res://img/main_menu/option.svg"))
+	PopupImg.set_texture(load("res://images/main_menu/option.svg"))
 	PopupImg.scale = Vector2(0.7,0.7)
 	PopupPlayer.play("RESET")
 	PopupPlayer.play("slide")
@@ -58,7 +58,7 @@ func _on_options_btn_mouse_entered() -> void:
 func _on_credits_btn_mouse_entered() -> void:
 	var ArrowsCredits = $Homescreen/VBoxArrows/ArrowsCredits
 	ArrowsCredits.text = show_arrows
-	PopupImg.set_texture(load("res://img/main_menu/credits.svg"))
+	PopupImg.set_texture(load("res://images/main_menu/credits.svg"))
 	PopupImg.scale = Vector2(0.7,0.7)
 	PopupPlayer.play("RESET")
 	PopupPlayer.play("slide")
@@ -66,7 +66,7 @@ func _on_credits_btn_mouse_entered() -> void:
 func _on_score_btn_mouse_entered() -> void:
 	var ArrowsScore = $Homescreen/VBoxArrows/ArrowsScore
 	ArrowsScore.text = show_arrows
-	PopupImg.set_texture(load("res://img/main_menu/score.svg"))
+	PopupImg.set_texture(load("res://images/main_menu/score.svg"))
 	PopupImg.scale = Vector2(0.7,0.7)
 	PopupPlayer.play("RESET")
 	PopupPlayer.play("slide")
@@ -74,7 +74,7 @@ func _on_score_btn_mouse_entered() -> void:
 func _on_exit_btn_mouse_entered() -> void:
 	var ArrowsExit = $Homescreen/VBoxArrows/ArrowsExit
 	ArrowsExit.text = show_arrows
-	PopupImg.set_texture(load("res://img/main_menu/exit.svg"))
+	PopupImg.set_texture(load("res://images/main_menu/exit.svg"))
 	PopupImg.scale = Vector2(0.7,0.7)
 	PopupPlayer.play("RESET")
 	PopupPlayer.play("slide")

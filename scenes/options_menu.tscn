@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c4klngq3w5x7u"]
 
 [ext_resource type="Script" uid="uid://n36a6o2m0bxr" path="res://scripts/options_menu.gd" id="1_hm4m4"]
-[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://img/bg/mainmenu_bg.jpg" id="2_hm4m4"]
+[ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_hm4m4"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_3xsyx"]
 [ext_resource type="Script" uid="uid://6hwua0qmo0rm" path="res://scripts/audio/options/master_volume_slider.gd" id="4_3xsyx"]
 [ext_resource type="Script" uid="uid://by24qc3q1yfce" path="res://scripts/audio/options/sound_volume_slider.gd" id="5_dhn0l"]
