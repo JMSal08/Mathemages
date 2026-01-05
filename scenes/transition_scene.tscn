@@ -8,7 +8,7 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DissolveRect:modulate")
+tracks/0/path = NodePath("BlackScreen:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,7 +23,7 @@ resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DissolveRect:modulate")
+tracks/0/path = NodePath("BlackScreen:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -42,7 +42,7 @@ _data = {
 [node name="TransitionScene" type="CanvasLayer"]
 script = ExtResource("1_fqlxa")
 
-[node name="DissolveRect" type="ColorRect" parent="."]
+[node name="BlackScreen" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_right = 1920.0
 offset_bottom = 1080.0
