@@ -22,10 +22,11 @@ theme_override_font_sizes/font_size = 120
 text = "Choose your professor!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 376.0
-offset_top = 600.0
-offset_right = 1464.0
-offset_bottom = 744.0
+offset_left = 256.0
+offset_top = 880.0
+offset_right = 1261.0
+offset_bottom = 1024.0
+theme_override_constants/separation = 17
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -36,12 +37,28 @@ position = Vector2(39.999996, 71.99999)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_ig3jb")
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="eadlerbtn" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "1111111111111111"
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Button2"]
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/eadlerbtn"]
 position = Vector2(74, 72)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_8ww06")
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1111111111111111"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1111111111111111"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1111111111111111"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1111111111111111"
