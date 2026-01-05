@@ -1,3 +1,66 @@
-[gd_scene format=3 uid="uid://0bmikyvdinse"]
+[gd_scene load_steps=2 format=3 uid="uid://0bmikyvdinse"]
 
-[node name="GameScene" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="1_5xmm1"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 1400.0
+offset_bottom = 1528.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5xmm1")
+
+[node name="LifeBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 704.0
+offset_bottom = 128.0
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.007
+offset_top = 832.0
+offset_right = 1408.0
+offset_bottom = 1072.44
+
+[node name="TimePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 832.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="TimePanel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 90
+text = "1:07 Left"
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1664.0
+offset_top = 128.0
+offset_right = 1920.0
+offset_bottom = 832.0
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1408.0
+offset_right = 1920.0
+offset_bottom = 128.0
