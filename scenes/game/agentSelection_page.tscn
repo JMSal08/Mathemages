@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc33jrvk56exn"]
+[gd_scene load_steps=5 format=3 uid="uid://bc33jrvk56exn"]
 
 [ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="1_y6bhy"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_vd4d7"]
 [ext_resource type="Texture2D" uid="uid://njduljj7qppe" path="res://char/eadler/img/eadler1x1.png" id="3_hnmim"]
+[ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="4_vd4d7"]
 
 [node name="AgentSelectionPage" type="Control"]
 layout_mode = 3
@@ -62,3 +63,12 @@ offset_right = 1772.0
 offset_bottom = 1019.0
 theme_override_font_sizes/font_size = 48
 text = "Let's Go!"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 328.0
+offset_right = 1464.0
+offset_bottom = 1728.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_vd4d7")
