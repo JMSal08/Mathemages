@@ -27,7 +27,7 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 128.0
 
-[node name="Label" type="Label" parent="LevelPanel"]
+[node name="LevelLabel" type="Label" parent="LevelPanel"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 16.0
@@ -73,6 +73,9 @@ offset_bottom = 192.0
 theme_override_font_sizes/font_size = 90
 text = "1:07 Left"
 horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="TimePanel"]
+autostart = true
 
 [node name="PowerUpsPanel" type="Panel" parent="."]
 layout_mode = 0
@@ -173,6 +176,7 @@ theme_override_font_sizes/font_size = 36
 text = "123456789012345"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="timeout" from="TimePanel/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="QandAPanel/AButton" to="." method="_on_a_button_pressed"]
 [connection signal="pressed" from="QandAPanel/BButton" to="." method="_on_b_button_pressed"]
 [connection signal="pressed" from="QandAPanel/CButton" to="." method="_on_c_button_pressed"]
