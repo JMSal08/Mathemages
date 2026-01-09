@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc33jrvk56exn"]
+[gd_scene load_steps=13 format=3 uid="uid://bc33jrvk56exn"]
 
+[ext_resource type="Script" uid="uid://c6o1780qsdq7p" path="res://scripts/game/agent_selection_page.gd" id="1_hnmim"]
 [ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="1_y6bhy"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_vd4d7"]
 [ext_resource type="Texture2D" uid="uid://njduljj7qppe" path="res://char/eadler/img/eadler1x1.png" id="3_hnmim"]
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="4_vd4d7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd6bt"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_vd4d7"]
 resource_name = "RESET"
@@ -66,6 +73,42 @@ _data = {
 &"popd": SubResource("Animation_hnmim")
 }
 
+[sub_resource type="Animation" id="Animation_ad4r8"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(384, -208)]
+}
+
+[sub_resource type="Animation" id="Animation_4s2py"]
+resource_name = "LabelAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.36666667, 0.53333336, 0.8333333),
+"transitions": PackedFloat32Array(-2, 0.5, 2, 2),
+"update": 0,
+"values": [Vector2(384, -208), Vector2(384, 104), Vector2(384, -16), Vector2(384, 48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4x3cg"]
+_data = {
+&"LabelAnimation": SubResource("Animation_4s2py"),
+&"RESET": SubResource("Animation_ad4r8")
+}
+
 [node name="AgentSelectionPage" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -73,6 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hnmim")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -82,10 +126,10 @@ texture = ExtResource("1_y6bhy")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 256.0
-offset_right = 1558.0
-offset_bottom = 403.0
+offset_left = 384.0
+offset_top = -208.0
+offset_right = 1566.0
+offset_bottom = -61.0
 theme_override_fonts/font = ExtResource("2_vd4d7")
 theme_override_font_sizes/font_size = 120
 text = "Choose your professor!"
@@ -135,7 +179,22 @@ offset_bottom = 1019.0
 theme_override_font_sizes/font_size = 48
 text = "Let's Go!"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 248.0
+offset_right = 1856.0
+offset_bottom = 352.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
+
+[node name="CharAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_ad4r8")
 }
+
+[node name="LabelAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4x3cg")
+}
+
+[connection signal="ready" from="." to="." method="_on_ready"]
