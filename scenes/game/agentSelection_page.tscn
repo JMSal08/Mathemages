@@ -1,9 +1,70 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc33jrvk56exn"]
+[gd_scene load_steps=8 format=3 uid="uid://bc33jrvk56exn"]
 
 [ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="1_y6bhy"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_vd4d7"]
 [ext_resource type="Texture2D" uid="uid://njduljj7qppe" path="res://char/eadler/img/eadler1x1.png" id="3_hnmim"]
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="4_vd4d7"]
+
+[sub_resource type="Animation" id="Animation_vd4d7"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 328)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hnmim"]
+resource_name = "popd"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 0.90125465),
+"update": 0,
+"values": [Vector2(64, 328), Vector2(64, 178)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1.5691696),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ad4r8"]
+_data = {
+&"RESET": SubResource("Animation_vd4d7"),
+&"popd": SubResource("Animation_hnmim")
+}
 
 [node name="AgentSelectionPage" type="Control"]
 layout_mode = 3
@@ -28,6 +89,16 @@ offset_bottom = 403.0
 theme_override_fonts/font = ExtResource("2_vd4d7")
 theme_override_font_sizes/font_size = 120
 text = "Choose your professor!"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 328.0
+offset_right = 1464.0
+offset_bottom = 1728.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_vd4d7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -64,11 +135,7 @@ offset_bottom = 1019.0
 theme_override_font_sizes/font_size = 48
 text = "Let's Go!"
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 328.0
-offset_right = 1464.0
-offset_bottom = 1728.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_vd4d7")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ad4r8")
+}
