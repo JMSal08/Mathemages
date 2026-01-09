@@ -5,7 +5,9 @@ var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Don
 var answer_to_question = "A"
 var questions = []
 var answers = []
-var timer_value = 30 # Value in Seconds
+var timer_value = 30 # Seconds
+var Dseconds = 15 # Seconds
+var Dminutes = 1 # Minutes
 
 #CHARACTER SETTINGS
 var AGENT = "Agent"
@@ -14,10 +16,8 @@ var response_incorrect = []
 var response_intro = []
 var response_outro = []
 var response_powerup = []
-var char_timer_value
-var timer_mode = 0 # 0 = default to delta, 1 = char_timer_value, 2 = 
-var Dseconds = 15 # Seconds
-var Dminutes = 1 # Minutes
+var timer_multiplier = 1.0
+
 
 var LEVEL_COUNTER = 1
 var correct_counter = 0
