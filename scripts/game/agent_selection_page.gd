@@ -11,3 +11,7 @@ func _on_ready() -> void:
 
 func _on_button_pressed() -> void:
 	TransitionScene.change_scene_to_file("res://scenes/game/game_scene.tscn")
+
+
+func _on_eadlerbtn_pressed() -> void:
+	CharAnimationPlayer.play("popd")

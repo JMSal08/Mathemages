@@ -41,7 +41,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_hnmim"]
 resource_name = "popd"
-length = 0.45
+length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -49,7 +49,7 @@ tracks/0/path = NodePath("TextureRect:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668),
+"times": PackedFloat32Array(0, 0.73333335),
 "transitions": PackedFloat32Array(1, 0.90125465),
 "update": 0,
 "values": [Vector2(64, 328), Vector2(64, 178)]
@@ -61,7 +61,7 @@ tracks/1/path = NodePath("TextureRect:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.36666667),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1.5691696),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -198,4 +198,5 @@ libraries = {
 }
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="HBoxContainer/eadlerbtn" to="." method="_on_eadlerbtn_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
