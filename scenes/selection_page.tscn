@@ -91,3 +91,5 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_l823m")
 text = "Import"
 
 [connection signal="pressed" from="MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
+[connection signal="pressed" from="StartGameBtn" to="." method="_on_start_game_btn_pressed"]
+[connection signal="pressed" from="ImportBtn" to="." method="_on_import_btn_pressed"]
