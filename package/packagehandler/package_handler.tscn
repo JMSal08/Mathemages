@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://be6k28eogsped"]
+[gd_scene format=3 uid="uid://be6k28eogsped"]
 
 [ext_resource type="Script" uid="uid://dahldnac8s6m7" path="res://package/packagehandler/package_handler.gd" id="1_m8i3k"]
 
-[node name="package_handler" type="Control"]
+[node name="package_handler" type="Control" unique_id=106450706]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

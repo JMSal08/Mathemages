@@ -2,10 +2,7 @@ extends Control
 
 
 var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dapibus accumsan. Donec rutrum vel ante a congue. Donec posuere dui nec ullamcorper interdum. Pellentesque mattis dui ac feugiat mattis. Curabitur non egestas tortor. Aliquam lacinia porta odio id aliquet. Nulla in imperdiet sem. Ut pretium nulla sed eros semper."
-var answer_to_question = "A"
-var questions = []
-var answers = []
-var choices
+var answer = "A"
 var timer_value = 30 # Seconds
 var Dseconds = 15 # Seconds
 var Dminutes = 1 # Minutes
@@ -36,18 +33,7 @@ var minutes = 0
 @onready var CButton = $QandAPanel/CButton
 @onready var DButton = $QandAPanel/DButton
 
-func randomizer():
-	var questions_length = questions.size()
-	var answers_length = answers.size()
-	print("QLength:  " + questions_length)
-	print("ALength:  " + answers_length)
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	
-	var random_question_index = rng.randi_range(0, questions_length - 1)
-	print("RandomQuestionIndex: " + random_question_index)
-	
-	return random_question_index
+
 
 func scroll_text_label(input_text:String):
 	TextLabel.visible_characters = 0
@@ -142,25 +128,25 @@ func minus_timer_value():
 
 # BELOW ARE CODE FOR BUTTONS
 func _on_a_button_pressed() -> void:
-	if "A" == answer_to_question.to_upper():
+	if AButton.text.to_upper() == answer.to_upper():
 		correct()
 	else:
 		incorrect()
 
 func _on_b_button_pressed() -> void:
-	if "B" == answer_to_question.to_upper():
+	if BButton.text.to_upper() == answer.to_upper():
 		correct()
 	else:
 		incorrect()
 
 func _on_c_button_pressed() -> void:
-	if "C" == answer_to_question.to_upper():
+	if CButton.text.to_upper() == answer.to_upper():
 		correct()
 	else:
 		incorrect()
 
 func _on_d_button_pressed() -> void:
-	if "D" == answer_to_question.to_upper():
+	if DButton.text.to_upper() == answer.to_upper():
 		correct()
 	else:
 		incorrect()
