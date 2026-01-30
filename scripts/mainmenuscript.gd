@@ -136,4 +136,4 @@ func _on_version_button_pressed() -> void:
 	MainMenu.count = count
 	print(count)
 	if count == 50:
-		TransitionScene.change_scene_to_file("res://scenes/scene.tscn")
+		TransitionScene.change_scene_to_file("res://scenes/misc/scene.tscn")

@@ -5,6 +5,7 @@ var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Don
 var answer_to_question = "A"
 var questions = []
 var answers = []
+var choices
 var timer_value = 30 # Seconds
 var Dseconds = 15 # Seconds
 var Dminutes = 1 # Minutes

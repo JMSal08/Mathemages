@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bwky1ymobsq55"]
+[gd_scene format=3 uid="uid://bwky1ymobsq55"]
 
 [ext_resource type="Script" uid="uid://cssbeaceyslnj" path="res://scripts/mainmenuscript.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_bqqt6"]
@@ -87,7 +87,7 @@ _data = {
 &"slide": SubResource("Animation_8ln24")
 }
 
-[node name="Main_Menu" type="Control"]
+[node name="Main_Menu" type="Control" unique_id=1761334823]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,7 +96,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqqt6")
 
-[node name="Homescreen" type="Panel" parent="."]
+[node name="Homescreen" type="Panel" parent="." unique_id=1160443458]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,7 +105,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ig7tw")
 
-[node name="TitleLogo" type="TextureRect" parent="Homescreen"]
+[node name="TitleLogo" type="TextureRect" parent="Homescreen" unique_id=921446898]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -118,7 +118,7 @@ grow_horizontal = 2
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_wu84c")
 
-[node name="VersionLabel" type="Label" parent="Homescreen"]
+[node name="VersionLabel" type="Label" parent="Homescreen" unique_id=441246109]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -134,7 +134,7 @@ theme_override_font_sizes/font_size = 36
 text = "Game Version Here"
 horizontal_alignment = 2
 
-[node name="VersionButton" type="Button" parent="Homescreen"]
+[node name="VersionButton" type="Button" parent="Homescreen" unique_id=718169077]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -153,7 +153,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jk1qb")
 text = "Game Version Here"
 alignment = 2
 
-[node name="CopyrightLabel" type="Label" parent="Homescreen"]
+[node name="CopyrightLabel" type="Label" parent="Homescreen" unique_id=570457742]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.9990001
@@ -166,7 +166,7 @@ theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 36
 text = "©PerformativeGames"
 
-[node name="PopupImg" type="TextureRect" parent="Homescreen"]
+[node name="PopupImg" type="TextureRect" parent="Homescreen" unique_id=650685574]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1216.0
@@ -177,7 +177,7 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 2
 
-[node name="VBoxButtons" type="VBoxContainer" parent="Homescreen"]
+[node name="VBoxButtons" type="VBoxContainer" parent="Homescreen" unique_id=885767019]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -190,7 +190,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 60
 
-[node name="PlayBtn" type="Button" parent="Homescreen/VBoxButtons"]
+[node name="PlayBtn" type="Button" parent="Homescreen/VBoxButtons" unique_id=1613685387]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("3_8ln24")
@@ -200,7 +200,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Play"
 
-[node name="OptionsBtn" type="Button" parent="Homescreen/VBoxButtons"]
+[node name="OptionsBtn" type="Button" parent="Homescreen/VBoxButtons" unique_id=1410914715]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
@@ -210,7 +210,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Options
 "
 
-[node name="CreditsBtn" type="Button" parent="Homescreen/VBoxButtons"]
+[node name="CreditsBtn" type="Button" parent="Homescreen/VBoxButtons" unique_id=118253266]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
@@ -219,7 +219,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_wu84c")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Credits"
 
-[node name="ScoreBtn" type="Button" parent="Homescreen/VBoxButtons"]
+[node name="ScoreBtn" type="Button" parent="Homescreen/VBoxButtons" unique_id=1645403920]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
@@ -229,7 +229,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Score
 "
 
-[node name="ExitBtn" type="Button" parent="Homescreen/VBoxButtons"]
+[node name="ExitBtn" type="Button" parent="Homescreen/VBoxButtons" unique_id=1225125129]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
@@ -240,7 +240,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Exit
 "
 
-[node name="VBoxArrows" type="VBoxContainer" parent="Homescreen"]
+[node name="VBoxArrows" type="VBoxContainer" parent="Homescreen" unique_id=1747793121]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 320.0
@@ -249,40 +249,38 @@ offset_bottom = 870.0
 mouse_filter = 2
 theme_override_constants/separation = 60
 
-[node name="ArrowsPlay" type="Label" parent="Homescreen/VBoxArrows"]
+[node name="ArrowsPlay" type="Label" parent="Homescreen/VBoxArrows" unique_id=524655690]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="ArrowsOptions" type="Label" parent="Homescreen/VBoxArrows"]
+[node name="ArrowsOptions" type="Label" parent="Homescreen/VBoxArrows" unique_id=1596660696]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="ArrowsCredits" type="Label" parent="Homescreen/VBoxArrows"]
+[node name="ArrowsCredits" type="Label" parent="Homescreen/VBoxArrows" unique_id=370509133]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="ArrowsScore" type="Label" parent="Homescreen/VBoxArrows"]
+[node name="ArrowsScore" type="Label" parent="Homescreen/VBoxArrows" unique_id=1006937853]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="ArrowsExit" type="Label" parent="Homescreen/VBoxArrows"]
+[node name="ArrowsExit" type="Label" parent="Homescreen/VBoxArrows" unique_id=987439272]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="PopupPlayer" type="AnimationPlayer" parent="Homescreen"]
-libraries = {
-&"": SubResource("AnimationLibrary_rtw2f")
-}
+[node name="PopupPlayer" type="AnimationPlayer" parent="Homescreen" unique_id=1524925259]
+libraries/ = SubResource("AnimationLibrary_rtw2f")
 
 [connection signal="ready" from="Homescreen/VersionLabel" to="." method="_on_versionlabel_ready"]
 [connection signal="pressed" from="Homescreen/VersionButton" to="." method="_on_version_button_pressed"]
