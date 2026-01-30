@@ -27,6 +27,7 @@ config/icon="uid://vefs7o0wy8bi"
 TransitionScene="*res://scenes/transition_scene.tscn"
 AudioPlayer="*res://scenes/audio/audio_player.tscn"
 PackageHandler="*uid://be6k28eogsped"
+CharacterHandler="*uid://dfokdaj642sxk"
 
 [display]
 

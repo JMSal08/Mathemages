@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dfokdaj642sxk"]
+
+[ext_resource type="Script" uid="uid://osjgh4wp6gsv" path="res://char/characterhandler/character_handler.gd" id="1_d2wuu"]
+
+[node name="CharacterHandler" type="Node" unique_id=1620348493]
+script = ExtResource("1_d2wuu")

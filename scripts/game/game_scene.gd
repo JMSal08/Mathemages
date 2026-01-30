@@ -7,14 +7,6 @@ var timer_value = 30 # Seconds
 var Dseconds = 15 # Seconds
 var Dminutes = 1 # Minutes
 
-#CHARACTER SETTINGS
-var AGENT = "Agent"
-var response_correct = []
-var response_incorrect = []
-var response_intro = []
-var response_outro = []
-var response_powerup = []
-var timer_multiplier = 1.0
 
 
 var LEVEL_COUNTER = 1
