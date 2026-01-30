@@ -2,12 +2,12 @@ extends Control
 
 
 var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dapibus accumsan. Donec rutrum vel ante a congue. Donec posuere dui nec ullamcorper interdum. Pellentesque mattis dui ac feugiat mattis. Curabitur non egestas tortor. Aliquam lacinia porta odio id aliquet. Nulla in imperdiet sem. Ut pretium nulla sed eros semper."
-var answer = "A"
+var answer = "123456789012345"
 var timer_value = 30 # Seconds
 var Dseconds = 15 # Seconds
 var Dminutes = 1 # Minutes
 
-
+var AGENT = AgentHandler.AGENT
 
 var LEVEL_COUNTER = 1
 var correct_counter = 0

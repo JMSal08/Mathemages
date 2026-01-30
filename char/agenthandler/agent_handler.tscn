@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cb0flv7741fc6"]
+
+[ext_resource type="Script" uid="uid://dtijusbpd7als" path="res://char/agenthandler/agent_handler.gd" id="1_ve82r"]
+
+[node name="AgentHandler" type="Node" unique_id=156895364]
+script = ExtResource("1_ve82r")
