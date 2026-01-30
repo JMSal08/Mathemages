@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://0bmikyvdinse"]
+[gd_scene format=3 uid="uid://0bmikyvdinse"]
 
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="1_5xmm1"]
 [ext_resource type="Script" uid="uid://orgf4lwqgyxt" path="res://scripts/game/game_scene.gd" id="1_omorx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xmm1"]
 
-[node name="GameScene" type="Control"]
+[node name="GameScene" type="Control" unique_id=812008187]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_omorx")
 
-[node name="Agent" type="TextureRect" parent="."]
+[node name="Agent" type="TextureRect" parent="." unique_id=800561070]
 layout_mode = 0
 offset_top = 128.0
 offset_right = 1400.0
@@ -22,12 +22,12 @@ offset_bottom = 1536.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5xmm1")
 
-[node name="LevelPanel" type="Panel" parent="."]
+[node name="LevelPanel" type="Panel" parent="." unique_id=1861199528]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 128.0
 
-[node name="LevelLabel" type="Label" parent="LevelPanel"]
+[node name="LevelLabel" type="Label" parent="LevelPanel" unique_id=1741696458]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 16.0
@@ -36,7 +36,7 @@ offset_bottom = 115.0
 theme_override_font_sizes/font_size = 72
 text = "Agent - Level 1"
 
-[node name="TextPanel" type="Panel" parent="."]
+[node name="TextPanel" type="Panel" parent="." unique_id=29128040]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.007
@@ -44,7 +44,7 @@ offset_top = 832.0
 offset_right = 1408.0
 offset_bottom = 1072.44
 
-[node name="TextLabel" type="RichTextLabel" parent="TextPanel"]
+[node name="TextLabel" type="RichTextLabel" parent="TextPanel" unique_id=893951028]
 layout_mode = 0
 offset_right = 1408.0
 offset_bottom = 248.0
@@ -55,16 +55,18 @@ theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dapibus accumsan. Donec rutrum vel ante a congue. Donec posuere dui nec ullamcorper interdum. Pellentesque mattis dui ac feugiat mattis. Curabitur non egestas tortor. Aliquam lacinia porta odio id aliquet. Nulla in imperdiet sem. Ut pretium nulla sed eros semper."
 scroll_following_visible_characters = true
+shortcut_keys_enabled = false
 horizontal_alignment = 3
+visible_characters_behavior = 1
 
-[node name="TimePanel" type="Panel" parent="."]
+[node name="TimePanel" type="Panel" parent="." unique_id=2072079263]
 layout_mode = 0
 offset_left = 1408.0
 offset_top = 832.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="TimeLabel" type="Label" parent="TimePanel"]
+[node name="TimeLabel" type="Label" parent="TimePanel" unique_id=329048771]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -74,23 +76,23 @@ theme_override_font_sizes/font_size = 90
 text = "1:07 Left"
 horizontal_alignment = 1
 
-[node name="Timer" type="Timer" parent="TimePanel"]
+[node name="Timer" type="Timer" parent="TimePanel" unique_id=883200653]
 autostart = true
 
-[node name="PowerUpsPanel" type="Panel" parent="."]
+[node name="PowerUpsPanel" type="Panel" parent="." unique_id=909081420]
 layout_mode = 0
 offset_left = 1664.0
 offset_top = 128.0
 offset_right = 1920.0
 offset_bottom = 832.0
 
-[node name="PointsPanel" type="Panel" parent="."]
+[node name="PointsPanel" type="Panel" parent="." unique_id=1766371229]
 layout_mode = 0
 offset_left = 1408.0
 offset_right = 1920.0
 offset_bottom = 128.0
 
-[node name="PointsLabel" type="Label" parent="PointsPanel"]
+[node name="PointsLabel" type="Label" parent="PointsPanel" unique_id=1229287432]
 layout_mode = 0
 offset_right = 512.0
 offset_bottom = 124.0
@@ -98,20 +100,20 @@ theme_override_font_sizes/font_size = 90
 text = "0 Points"
 horizontal_alignment = 1
 
-[node name="LifePanel" type="Panel" parent="."]
+[node name="LifePanel" type="Panel" parent="." unique_id=1154455994]
 layout_mode = 0
 offset_left = 640.0
 offset_right = 1408.0
 offset_bottom = 128.0
 
-[node name="LifeBar" type="TextureProgressBar" parent="LifePanel"]
+[node name="LifeBar" type="TextureProgressBar" parent="LifePanel" unique_id=1665061125]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 24.0
 offset_right = 704.0
 offset_bottom = 104.0
 
-[node name="QandAPanel" type="Panel" parent="."]
+[node name="QandAPanel" type="Panel" parent="." unique_id=1092743289]
 layout_mode = 0
 offset_left = 704.0
 offset_top = 128.0
@@ -119,7 +121,7 @@ offset_right = 1664.0
 offset_bottom = 832.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_5xmm1")
 
-[node name="AButton" type="Button" parent="QandAPanel"]
+[node name="AButton" type="Button" parent="QandAPanel" unique_id=1914332258]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.73300004
@@ -133,7 +135,7 @@ offset_bottom = 448.128
 theme_override_font_sizes/font_size = 36
 text = "123456789012345"
 
-[node name="BButton" type="Button" parent="QandAPanel"]
+[node name="BButton" type="Button" parent="QandAPanel" unique_id=1444514147]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.73300004
@@ -147,7 +149,7 @@ offset_bottom = 448.128
 theme_override_font_sizes/font_size = 36
 text = "123456789012345"
 
-[node name="CButton" type="Button" parent="QandAPanel"]
+[node name="CButton" type="Button" parent="QandAPanel" unique_id=590428009]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.73300004
@@ -161,7 +163,7 @@ offset_bottom = 768.128
 theme_override_font_sizes/font_size = 36
 text = "123456789012345"
 
-[node name="DButton" type="Button" parent="QandAPanel"]
+[node name="DButton" type="Button" parent="QandAPanel" unique_id=1142888660]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.73300004
