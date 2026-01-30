@@ -22,12 +22,17 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="uid://qrblgspjrptw"
 config/icon="uid://vefs7o0wy8bi"
 
+[audio]
+
+buses/default_bus_layout="uid://gwy4hmw7gkxg"
+
 [autoload]
 
 TransitionScene="*res://scenes/transition_scene.tscn"
 AudioPlayer="*res://scenes/audio/audio_player.tscn"
 PackageHandler="*uid://be6k28eogsped"
 AgentHandler="*uid://cb0flv7741fc6"
+SelectionPage="*uid://beju08dyvpfjq"
 
 [display]
 

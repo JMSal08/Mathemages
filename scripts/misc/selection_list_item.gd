@@ -21,3 +21,4 @@ func _on_ready() -> void:
 
 func _on_pressed() -> void:
 	print("pressed selectionlistitem")
+	SelectionPage.object_pressed(RankLabel.text, TitleLabel.text)

@@ -17,5 +17,5 @@ func _on_import_btn_pressed() -> void:
 func _on_start_game_btn_pressed() -> void:
 	TransitionScene.change_scene_to_file("res://scenes/game/agentSelection_page.tscn")
 
-func button_pressed() -> void:
-	pass
+func object_pressed(rank, title) -> void:
+	SelectedLabel.text = "Selected Module: " + rank + " " + title
