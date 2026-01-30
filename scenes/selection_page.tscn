@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://beju08dyvpfjq" path="res://scripts/selection_page.gd" id="1_jkxll"]
 [ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_jkxll"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_3d6mh"]
+[ext_resource type="PackedScene" uid="uid://cmu2nyufp5ofm" path="res://scenes/misc/selection_list_item.tscn" id="3_l823m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkxll"]
 texture = ExtResource("2_jkxll")
@@ -28,6 +29,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jkxll")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=898800289]
@@ -36,13 +39,27 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 960.0
+mouse_filter = 2
+mouse_behavior_recursive = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=807688391]
 layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 2
 
 [node name="ItemContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=1388920528]
+custom_minimum_size = Vector2(1792, 896)
 layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 2
 theme_override_constants/separation = 192
+
+[node name="SelectionListItem" parent="PanelContainer/ScrollContainer/ItemContainer" unique_id=276075663 instance=ExtResource("3_l823m")]
+layout_mode = 2
+rank = 1
+title = "Evaluate The Functions"
+file_path = "res://package/default/EvaluateFunctions.json"
+subject = "Mathematics"
 
 [node name="MainMenuBtn" type="Button" parent="." unique_id=1761199626]
 layout_mode = 1
@@ -96,7 +113,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_l823m")
 text = "Import"
 
-[node name="Label" type="Label" parent="." unique_id=851651142]
+[node name="SelectedLabel" type="Label" parent="." unique_id=851651142]
 layout_mode = 0
 offset_left = 640.0
 offset_top = 1000.0

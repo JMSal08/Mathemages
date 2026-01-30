@@ -1,0 +1,107 @@
+{
+   "edition": "mathemages",
+   "title": "Evaluate the Function",
+   "subject": "Math",
+   "questions": [
+      {
+         "question": "f(x) = 25 - 3x || f(4) = ?",
+         "answer": 13,
+         "choices": [
+            13,
+            12,
+            18,
+            37
+         ]
+      },
+      {
+         "question": "f(x) = 6x + 100 || f(-5) = ?",
+         "answer": 70,
+         "choices": [
+            70,
+            -70,
+            130,
+            -130
+         ]
+      },
+      {
+         "question": "f(x) = 5x - 3 || f(5) = ?",
+         "answer": 22,
+         "choices": [
+            22,
+            7,
+            28,
+            13
+         ]
+      },
+      {
+         "question": "f(x) = x + 12 || f(-5) = ?",
+         "answer": 7,
+         "choices": [
+            7,
+            17,
+            -17,
+            -7
+         ]
+      },
+      {
+         "question": "f(x) = 12x + 13 || f(0.5) = ?",
+         "answer": 19,
+         "choices": [
+            19,
+            73,
+            37,
+            25
+         ]
+      },
+      {
+         "question": "f(x) = 25 - 4x || f(15) = ?",
+         "answer": -35,
+         "choices": [
+            -35,
+            35,
+            85,
+            -85
+         ]
+      },
+      {
+         "question": "f(x) = 17 - 6x || f(-2) = ?",
+         "answer": 29,
+         "choices": [
+            29,
+            5,
+            9,
+            21
+         ]
+      },
+      {
+         "question": "f(x) = 49 - x || f(-13) = ?",
+         "answer": 62,
+         "choices": [
+            62,
+            -36,
+            36,
+            56
+         ]
+      },
+      {
+         "question": "f(x) = 4x + 0.5 || f(0.3) = ?",
+         "answer": 1.7,
+         "choices": [
+            1.7,
+            12.5,
+            4.8,
+            0.62
+         ]
+      },
+      {
+         "question": "f(x) = 6x + 7 || f(9) = ?",
+         "answer": 61,
+         "choices": [
+            61,
+            56,
+            67,
+            54
+         ]
+      }
+   ]
+}

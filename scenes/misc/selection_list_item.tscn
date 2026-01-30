@@ -1,29 +1,29 @@
-[gd_scene format=3 uid="uid://cp4bcvlxnhnc"]
+[gd_scene format=3 uid="uid://cmu2nyufp5ofm"]
 
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="1_jpx6t"]
 [ext_resource type="Script" uid="uid://byky56schudcc" path="res://scripts/misc/selection_list_item.gd" id="1_s8aos"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8aos"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpx6t"]
 bg_color = Color(0.578394, 0.583627, 0.56991893, 1)
 border_width_left = 175
 
-[node name="SelectionListItem" type="Control" unique_id=1889729719]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="SelectionListItem" type="Button" unique_id=276075663]
+custom_minimum_size = Vector2(1792, 192)
+offset_right = 1792.0
+offset_bottom = 192.0
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
 script = ExtResource("1_s8aos")
 
-[node name="Panel" type="Panel" parent="." unique_id=512020612]
+[node name="Panel" type="Panel" parent="." unique_id=737933379]
 layout_mode = 0
 offset_right = 1792.0
 offset_bottom = 192.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_s8aos")
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpx6t")
 
-[node name="RankLabel" type="Label" parent="." unique_id=78621234]
+[node name="RankLabel" type="Label" parent="." unique_id=1965318591]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 48.0
@@ -34,7 +34,7 @@ theme_override_fonts/font = ExtResource("1_jpx6t")
 theme_override_font_sizes/font_size = 96
 text = "#01"
 
-[node name="TitleLabel" type="Label" parent="." unique_id=81542521]
+[node name="TitleLabel" type="Label" parent="." unique_id=98207323]
 layout_mode = 0
 offset_left = 176.0
 offset_top = 16.0
@@ -45,7 +45,7 @@ theme_override_fonts/font = ExtResource("1_jpx6t")
 theme_override_font_sizes/font_size = 96
 text = "File Name"
 
-[node name="FilePathLabel" type="Label" parent="." unique_id=186846008]
+[node name="FilePathLabel" type="Label" parent="." unique_id=856988501]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 120.0
@@ -56,7 +56,7 @@ theme_override_fonts/font = ExtResource("1_jpx6t")
 theme_override_font_sizes/font_size = 48
 text = "C:/this/is/the/file/path/to/the.json"
 
-[node name="SubjectLabel" type="Label" parent="." unique_id=1159007933]
+[node name="SubjectLabel" type="Label" parent="." unique_id=1434590481]
 layout_mode = 0
 offset_left = 1208.0
 offset_top = 40.0
@@ -68,4 +68,5 @@ theme_override_font_sizes/font_size = 96
 text = "English"
 horizontal_alignment = 2
 
+[connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="ready" from="." to="." method="_on_ready"]

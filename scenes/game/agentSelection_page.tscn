@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bc33jrvk56exn"]
+[gd_scene format=3 uid="uid://bc33jrvk56exn"]
 
 [ext_resource type="Script" uid="uid://c6o1780qsdq7p" path="res://scripts/game/agent_selection_page.gd" id="1_hnmim"]
 [ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="1_y6bhy"]
@@ -109,7 +109,7 @@ _data = {
 &"RESET": SubResource("Animation_ad4r8")
 }
 
-[node name="AgentSelectionPage" type="Control"]
+[node name="AgentSelectionPage" type="Control" unique_id=446443074]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,13 +118,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hnmim")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=802109478]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_y6bhy")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1736248678]
 layout_mode = 0
 offset_left = 384.0
 offset_top = -208.0
@@ -134,7 +134,7 @@ theme_override_fonts/font = ExtResource("2_vd4d7")
 theme_override_font_sizes/font_size = 120
 text = "Choose your professor!"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=149626975]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 64.0
@@ -144,7 +144,7 @@ offset_bottom = 1728.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vd4d7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1598851307]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 872.0
@@ -153,24 +153,24 @@ offset_bottom = 1480.0
 scale = Vector2(0.25, 0.25)
 theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1848245156]
 layout_mode = 2
 icon = ExtResource("3_hnmim")
 
-[node name="eadlerbtn" type="Button" parent="HBoxContainer"]
+[node name="eadlerbtn" type="Button" parent="HBoxContainer" unique_id=1528863792]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
 icon = ExtResource("3_hnmim")
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1088266209]
 layout_mode = 2
 icon = ExtResource("3_hnmim")
 
-[node name="Button3" type="Button" parent="HBoxContainer"]
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1133474285]
 layout_mode = 2
 icon = ExtResource("3_hnmim")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1827276666]
 layout_mode = 0
 offset_left = 1456.0
 offset_top = 944.0
@@ -179,7 +179,7 @@ offset_bottom = 1019.0
 theme_override_font_sizes/font_size = 48
 text = "Let's Go!"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1670833244]
 layout_mode = 0
 offset_left = 904.0
 offset_top = 248.0
@@ -187,15 +187,11 @@ offset_right = 1856.0
 offset_bottom = 352.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
 
-[node name="CharAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ad4r8")
-}
+[node name="CharAnimationPlayer" type="AnimationPlayer" parent="." unique_id=296403669]
+libraries/ = SubResource("AnimationLibrary_ad4r8")
 
-[node name="LabelAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_4x3cg")
-}
+[node name="LabelAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1757797774]
+libraries/ = SubResource("AnimationLibrary_4x3cg")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="HBoxContainer/eadlerbtn" to="." method="_on_eadlerbtn_pressed"]

@@ -17,3 +17,7 @@ func _on_ready() -> void:
 	TitleLabel.text = title
 	FilePathLabel.text = file_path
 	SubjectLabel.text = subject
+
+
+func _on_pressed() -> void:
+	print("pressed selectionlistitem")
