@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhpyoagru4vyw"]
+[gd_scene format=3 uid="uid://bhpyoagru4vyw"]
 
 [ext_resource type="Script" uid="uid://dp0om0fg5yjmy" path="res://scripts/credits_page.gd" id="1_o58sn"]
 [ext_resource type="Texture2D" uid="uid://b7b23ao4y87a1" path="res://images/bg/mainmenu_bg.jpg" id="2_o58sn"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_3tdve"]
+[ext_resource type="Texture2D" uid="uid://dfue4ri5k10eb" path="res://images/logo/studio_logo.svg" id="3_7sbpu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkybi"]
 texture = ExtResource("2_o58sn")
@@ -10,7 +11,7 @@ expand_margin_top = 200.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqq10"]
 
-[node name="credits_page" type="Control"]
+[node name="credits_page" type="Control" unique_id=1596665641]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,21 +20,135 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o58sn")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=693994057]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_dkybi")
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Panel" type="Panel" parent="Panel" unique_id=1387124616]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="MainMenuBtn" type="Button" parent="Panel"]
+[node name="Control" type="Control" parent="Panel/Panel" unique_id=902671621]
+anchors_preset = 0
+offset_left = 72.0
+offset_top = 320.0
+offset_right = 960.0
+offset_bottom = 752.0
+
+[node name="Label" type="Label" parent="Panel/Panel/Control" unique_id=280629136]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 869.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 64
+text = "Jan Michael Renz E. Salcedo"
+
+[node name="Label2" type="Label" parent="Panel/Panel/Control" unique_id=61402155]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 864.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 32
+text = "Lead Developer
+Programmer
+Layout Editor"
+
+[node name="Control2" type="Control" parent="Panel/Panel" unique_id=1933126897]
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 576.0
+offset_right = 952.0
+offset_bottom = 1008.0
+
+[node name="Label" type="Label" parent="Panel/Panel/Control2" unique_id=1450539370]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 869.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 64
+text = "RayMarc C. Suclan"
+
+[node name="Label2" type="Label" parent="Panel/Panel/Control2" unique_id=1138055360]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 864.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 32
+text = "Lead Artist
+UI/UX Designer"
+
+[node name="Control3" type="Control" parent="Panel/Panel" unique_id=1901854911]
+anchors_preset = 0
+offset_left = 960.0
+offset_top = 320.0
+offset_right = 1848.0
+offset_bottom = 752.0
+
+[node name="Label" type="Label" parent="Panel/Panel/Control3" unique_id=1554303600]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 869.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 64
+text = " Justin Johann Moran"
+
+[node name="Label2" type="Label" parent="Panel/Panel/Control3" unique_id=1826794821]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 864.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 32
+text = " Game Designer
+ Game Artist"
+
+[node name="Control4" type="Control" parent="Panel/Panel" unique_id=1138282470]
+anchors_preset = 0
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1848.0
+offset_bottom = 1008.0
+
+[node name="Label" type="Label" parent="Panel/Panel/Control4" unique_id=1295464921]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 869.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 64
+text = "Railey Scott D. Sarmiento"
+
+[node name="Label2" type="Label" parent="Panel/Panel/Control4" unique_id=1331083235]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 864.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 32
+text = "Audio Engineer
+Music Composer"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel" unique_id=278108222]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.0
+offset_right = 752.0
+offset_bottom = 714.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_7sbpu")
+
+[node name="MainMenuBtn" type="Button" parent="Panel" unique_id=1044923154]
 layout_mode = 0
 offset_left = 808.0
 offset_top = 1000.0
