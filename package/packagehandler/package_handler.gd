@@ -31,7 +31,6 @@ func load_questions(file_path: String):
 	var data = JSON.parse_string(text)
 	
 	if data == null:
-		TransitionScene.change_scene_to_file("res://scenes/main_menu.tscn")
 		push_error("Error parsing JSON File")
 		return
 	

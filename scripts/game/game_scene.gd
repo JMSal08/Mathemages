@@ -2,8 +2,8 @@ extends Control
 
 
 var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dapibus accumsan. Donec rutrum vel ante a congue. Donec posuere dui nec ullamcorper interdum. Pellentesque mattis dui ac feugiat mattis. Curabitur non egestas tortor. Aliquam lacinia porta odio id aliquet. Nulla in imperdiet sem. Ut pretium nulla sed eros semper."
-var question = "q"
-var answer = "123456789012345"
+var question
+var answer
 var choice_one
 var choice_two
 var choice_three
@@ -134,6 +134,8 @@ func add_timer_value():
 func minus_timer_value():
 	pass # DO THIS NEXT
 
+func pause_timer() -> void:
+	pass
 
 # BELOW ARE CODE FOR BUTTONS
 func _on_a_button_pressed() -> void:
