@@ -5,6 +5,12 @@
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_vd4d7"]
 [ext_resource type="Texture2D" uid="uid://njduljj7qppe" path="res://char/eadler/img/eadler1x1.png" id="3_hnmim"]
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="4_vd4d7"]
+[ext_resource type="Texture2D" uid="uid://d00my0t46lt8l" path="res://char/pytha/img/pytha1x1.png" id="5_ad4r8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad4r8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd6bt"]
 corner_radius_top_left = 10
@@ -17,7 +23,7 @@ resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
+tracks/0/path = NodePath("CharFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +35,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/path = NodePath("CharFrame:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,15 +47,15 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_hnmim"]
 resource_name = "popd"
-length = 0.75
+length = 0.35
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
+tracks/0/path = NodePath("CharFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.73333335),
+"times": PackedFloat32Array(0, 0.33333334),
 "transitions": PackedFloat32Array(1, 0.90125465),
 "update": 0,
 "values": [Vector2(64, 328), Vector2(64, 178)]
@@ -57,11 +63,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/path = NodePath("CharFrame:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(0, 0.33333334),
 "transitions": PackedFloat32Array(1, 1.5691696),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -134,7 +140,7 @@ theme_override_fonts/font = ExtResource("2_vd4d7")
 theme_override_font_sizes/font_size = 120
 text = "Choose your professor!"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=149626975]
+[node name="CharFrame" type="TextureRect" parent="." unique_id=149626975]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 64.0
@@ -153,14 +159,15 @@ offset_bottom = 1480.0
 scale = Vector2(0.25, 0.25)
 theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1848245156]
-layout_mode = 2
-icon = ExtResource("3_hnmim")
-
 [node name="eadlerbtn" type="Button" parent="HBoxContainer" unique_id=1528863792]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_ad4r8")
 icon = ExtResource("3_hnmim")
+
+[node name="pythabtn" type="Button" parent="HBoxContainer" unique_id=1848245156]
+layout_mode = 2
+icon = ExtResource("5_ad4r8")
 
 [node name="Button2" type="Button" parent="HBoxContainer" unique_id=1088266209]
 layout_mode = 2
@@ -195,4 +202,5 @@ libraries/ = SubResource("AnimationLibrary_4x3cg")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="HBoxContainer/eadlerbtn" to="." method="_on_eadlerbtn_pressed"]
+[connection signal="pressed" from="HBoxContainer/pythabtn" to="." method="_on_pythabtn_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_omorx")
 
-[node name="Agent" type="TextureRect" parent="." unique_id=800561070]
+[node name="AgentImg" type="TextureRect" parent="." unique_id=800561070]
 layout_mode = 0
 offset_top = 128.0
 offset_right = 1400.0

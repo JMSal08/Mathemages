@@ -17,6 +17,7 @@ var incorrect_counter = 0
 var seconds = 0
 var minutes = 0
 
+@onready var AgentImg = $AgentImg
 @onready var LevelLabel = $LevelPanel/LevelLabel
 @onready var TextLabel = $TextPanel/TextLabel
 @onready var TimeLabel = $TimePanel/TimeLabel
@@ -71,6 +72,8 @@ func incorrect():
 func _on_ready() -> void:
 	scroll_text_label(example_text)
 	reset_timer()
+	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+	AgentImg.texture = AgentHandler.get_agent_img(AGENT)
 
 func _on_timer_timeout() -> void:
 	if seconds == 0:
@@ -103,19 +106,6 @@ func add_timer_value():
 
 func minus_timer_value():
 	pass # DO THIS NEXT
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # BELOW ARE CODE FOR BUTTONS
