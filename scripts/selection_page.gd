@@ -24,37 +24,8 @@ func gather_data() -> Array:
 			"title" : "Evaulating Functions",
 			"file_path" :"res://package/default/EvaluateFunctions.json",
 			"subject" : "Mathematics" 
-		},
-		{
-			"rank": 2,
-			"title": "example",
-			"file_path": "example",
-			"subject": "example"
-		},
-		{
-			"rank": 67,
-			"title": "example",
-			"file_path": "example",
-			"subject": "example"
-		},
-		{
-			"rank": 3,
-			"title": "example",
-			"file_path": "example",
-			"subject": "example"
-		},
-		{
-			"rank": 4,
-			"title": "example",
-			"file_path": "example",
-			"subject": "example"
-		},
-		{
-			"rank": 5,
-			"title": "example",
-			"file_path": "example",
-			"subject": "example"
 		}
+		
 	]
 	return data_array
 
