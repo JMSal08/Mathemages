@@ -2,7 +2,12 @@ extends Control
 
 
 var example_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dapibus accumsan. Donec rutrum vel ante a congue. Donec posuere dui nec ullamcorper interdum. Pellentesque mattis dui ac feugiat mattis. Curabitur non egestas tortor. Aliquam lacinia porta odio id aliquet. Nulla in imperdiet sem. Ut pretium nulla sed eros semper."
+var question = "q"
 var answer = "123456789012345"
+var choice_one
+var choice_two
+var choice_three
+var choice_four
 var timer_value = 30 # Seconds
 var Dseconds = 15 # Seconds
 var Dminutes = 1 # Minutes
@@ -26,6 +31,20 @@ var minutes = 0
 @onready var CButton = $QandAPanel/CButton
 @onready var DButton = $QandAPanel/DButton
 
+func refresh_question() -> void:
+	question = PackageHandler.selected_question
+	answer = PackageHandler.selected_answer
+	choice_one = PackageHandler.choice_one
+	choice_two = PackageHandler.choice_two
+	choice_three = PackageHandler.choice_three
+	choice_four = PackageHandler.choice_four
+	
+	
+func change_button_value() -> void:
+	AButton.text = str(choice_one)
+	BButton.text = str(choice_two)
+	CButton.text = str(choice_three)
+	DButton.text = str(choice_four)
 
 
 func scroll_text_label(input_text:String):
@@ -52,12 +71,14 @@ func correct():
 	disable_buttons()
 	correct_counter += 1
 	scroll_text_label("correct!")
-	add_timer_value()
 	await get_tree().create_timer(1).timeout
 	LEVEL_COUNTER += 1
 	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+	PackageHandler.handler()
+	refresh_question()
+	change_button_value()
 	enable_buttons()
-	scroll_text_label(example_text)
+	scroll_text_label(question)
 
 func incorrect():
 	disable_buttons()
@@ -66,11 +87,17 @@ func incorrect():
 	await get_tree().create_timer(1).timeout
 	LEVEL_COUNTER += 1
 	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+	PackageHandler.handler()
+	refresh_question()
+	change_button_value()
 	enable_buttons()
-	scroll_text_label(example_text)
+	scroll_text_label(question)
 
 func _on_ready() -> void:
-	scroll_text_label(example_text)
+	PackageHandler.handler()
+	refresh_question()
+	change_button_value()
+	scroll_text_label(question)
 	reset_timer()
 	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
 	AgentImg.texture = AgentHandler.get_agent_img(AGENT)

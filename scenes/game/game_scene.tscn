@@ -57,6 +57,7 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet
 scroll_following_visible_characters = true
 shortcut_keys_enabled = false
 horizontal_alignment = 3
+justification_flags = 161
 visible_characters_behavior = 1
 
 [node name="TimePanel" type="Panel" parent="." unique_id=2072079263]
