@@ -1,7 +1,7 @@
 extends Node
 
 #CHARACTER SETTINGS
-var AGENT = "Agent"
+var AGENT = ""
 
 var response_correct = []
 var response_incorrect = []

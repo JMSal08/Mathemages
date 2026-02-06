@@ -109,10 +109,26 @@ tracks/0/keys = {
 "values": [Vector2(384, -208)]
 }
 
+[sub_resource type="Animation" id="Animation_4x3cg"]
+resource_name = "bounce"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.6333333, 1),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(384, 48), Vector2(384, 70), Vector2(384, 20), Vector2(384, 48)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4x3cg"]
 _data = {
 &"LabelAnimation": SubResource("Animation_4s2py"),
-&"RESET": SubResource("Animation_ad4r8")
+&"RESET": SubResource("Animation_ad4r8"),
+&"bounce": SubResource("Animation_4x3cg")
 }
 
 [node name="AgentSelectionPage" type="Control" unique_id=446443074]
@@ -177,6 +193,15 @@ icon = ExtResource("3_hnmim")
 layout_mode = 2
 icon = ExtResource("3_hnmim")
 
+[node name="BackButton" type="Button" parent="." unique_id=1191213551]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 944.0
+offset_right = 1428.0
+offset_bottom = 1019.0
+theme_override_font_sizes/font_size = 48
+text = "Go Back!"
+
 [node name="Button" type="Button" parent="." unique_id=1827276666]
 layout_mode = 0
 offset_left = 1456.0
@@ -203,4 +228,5 @@ libraries/ = SubResource("AnimationLibrary_4x3cg")
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="HBoxContainer/eadlerbtn" to="." method="_on_eadlerbtn_pressed"]
 [connection signal="pressed" from="HBoxContainer/pythabtn" to="." method="_on_pythabtn_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

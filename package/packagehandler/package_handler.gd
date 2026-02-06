@@ -1,5 +1,8 @@
 extends Control
 
+var title = ""
+var path_to_file = ""
+
 var edition = ""
 var subject = ""
 var questions: Array = []
@@ -7,8 +10,10 @@ var answers: Array = []
 var choices: Array = []
 
 func load_questions(file_path: String):
+	file_path = path_to_file
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file == null:
+		TransitionScene.change_scene_to_file("res://scenes/main_menu.tscn")
 		push_error("Could not open file: %s" % file_path)
 		return
 	
@@ -16,10 +21,11 @@ func load_questions(file_path: String):
 	var data = JSON.parse_string(text)
 	
 	if data == null:
+		TransitionScene.change_scene_to_file("res://scenes/main_menu.tscn")
 		push_error("Error parsing JSON File")
 		return
 	
-	edition.clear()
+	edition = ""
 	edition= data.get("edition", "")
 	if edition.to_lower() != "mathemages":
 		push_error("Not Valid Mathemages JSON file")
@@ -34,6 +40,10 @@ func load_questions(file_path: String):
 	for q in questions:
 		answers.append(q["answer"])
 		choices.append(q["choices"])
+	
+	print(questions)
+	print(answers)
+	print(choices)
 
 func randomizer():
 	var questions_length = questions.size()

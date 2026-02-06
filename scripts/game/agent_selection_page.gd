@@ -7,13 +7,17 @@ var eadlerpic = load("res://char/eadler/img/eadler.png")
 var pythapic = load("res://char/pytha/img/pytha.png")
 
 func _on_ready() -> void:
+	AgentHandler.AGENT = ""
 	await get_tree().create_timer(1).timeout
 	LabelAnimationPlayer.play("LabelAnimation")
 
 
 
 func _on_button_pressed() -> void:
-	TransitionScene.change_scene_to_file("res://scenes/game/game_scene.tscn")
+	if AgentHandler.AGENT == "":
+		LabelAnimationPlayer.play("bounce")
+	else:
+		TransitionScene.change_scene_to_file("res://scenes/game/game_scene.tscn")
 
 
 func _on_eadlerbtn_pressed() -> void:
@@ -26,3 +30,7 @@ func _on_pythabtn_pressed() -> void:
 	CharFrame.texture = pythapic
 	AgentHandler.AGENT = "Pytha"
 	CharAnimationPlayer.play("popd")
+
+
+func _on_back_button_pressed() -> void:
+	TransitionScene.change_scene_to_file("res://scenes/selection_page.tscn")

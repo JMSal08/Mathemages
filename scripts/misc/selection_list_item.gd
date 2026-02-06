@@ -21,4 +21,5 @@ func _on_ready() -> void:
 
 func _on_pressed() -> void:
 	print("pressed selectionlistitem")
-	SelectionPage.object_pressed(RankLabel.text, TitleLabel.text)
+	PackageHandler.title = TitleLabel.text
+	PackageHandler.path_to_file = FilePathLabel.text

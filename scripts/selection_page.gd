@@ -1,7 +1,6 @@
 extends Control
 const SELECTION_LIST_ITEM = preload("res://scenes/misc/selection_list_item.tscn")
 @onready var ItemContainer = $PanelContainer/ScrollContainer/ItemContainer
-@onready var SelectedLabel = $SelectedLabel
 
 func _on_ready() -> void:
 	var new_data_array: Array = gather_data()
@@ -33,7 +32,7 @@ func gather_data() -> Array:
 			"subject": "example"
 		},
 		{
-			"rank": 2,
+			"rank": 67,
 			"title": "example",
 			"file_path": "example",
 			"subject": "example"
@@ -68,7 +67,5 @@ func _on_import_btn_pressed() -> void:
 
 
 func _on_start_game_btn_pressed() -> void:
+	PackageHandler.load_questions("placeholder")
 	TransitionScene.change_scene_to_file("res://scenes/game/agentSelection_page.tscn")
-
-func object_pressed(rank, title) -> void:
-	SelectedLabel.text = "Selected Module: " + rank + " " + title
