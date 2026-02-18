@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bc33jrvk56exn"]
 
 [ext_resource type="Script" uid="uid://c6o1780qsdq7p" path="res://scripts/game/agent_selection_page.gd" id="1_hnmim"]
-[ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="1_y6bhy"]
+[ext_resource type="Texture2D" uid="uid://8of6e2dlf3cx" path="res://images/bg/agentSelect_bg.png" id="2_ad4r8"]
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_vd4d7"]
 [ext_resource type="Texture2D" uid="uid://njduljj7qppe" path="res://char/eadler/img/eadler1x1.png" id="3_hnmim"]
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="4_vd4d7"]
@@ -55,10 +55,10 @@ tracks/0/path = NodePath("CharFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.33333334),
-"transitions": PackedFloat32Array(1, 0.90125465),
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(64, 328), Vector2(64, 178)]
+"values": [Vector2(64, 328), Vector2(64, 121)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -144,7 +144,7 @@ script = ExtResource("1_hnmim")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_y6bhy")
+texture = ExtResource("2_ad4r8")
 
 [node name="Label" type="Label" parent="." unique_id=1736248678]
 layout_mode = 0
