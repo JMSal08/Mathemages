@@ -17,6 +17,7 @@ func _on_button_pressed() -> void:
 	if AgentHandler.AGENT == "":
 		LabelAnimationPlayer.play("bounce")
 	else:
+		PackageHandler.gameover_condition = false
 		TransitionScene.change_scene_to_file("res://scenes/game/game_scene.tscn")
 
 

@@ -31,6 +31,22 @@ var minutes = 0
 @onready var CButton = $QandAPanel/CButton
 @onready var DButton = $QandAPanel/DButton
 
+func check_for_gameover():
+	if PackageHandler.gameover_condition:
+		gameover()
+	else:
+		pass
+
+
+func gameover():
+	print("levels: " + str(LEVEL_COUNTER))
+	print("correct: " + str(correct_counter))
+	print("incorrect: " + str(incorrect_counter))
+	TransitionScene.change_scene_to_file("res://scenes/game/gameover_scene.tscn")
+	await get_tree().create_timer(5).timeout
+	print("gameover")
+
+
 func refresh_question() -> void:
 	question = PackageHandler.selected_question
 	answer = PackageHandler.selected_answer
@@ -72,29 +88,34 @@ func correct():
 	correct_counter += 1
 	scroll_text_label("correct!")
 	await get_tree().create_timer(1).timeout
-	LEVEL_COUNTER += 1
-	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
 	PackageHandler.handler()
-	refresh_question()
-	change_button_value()
-	enable_buttons()
-	scroll_text_label(question)
+	check_for_gameover()
+	if PackageHandler.gameover_condition == false:
+		LEVEL_COUNTER += 1
+		LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+		refresh_question()
+		change_button_value()
+		enable_buttons()
+		scroll_text_label(question)
 
 func incorrect():
 	disable_buttons()
 	incorrect_counter += 1
 	scroll_text_label("False!")
 	await get_tree().create_timer(1).timeout
-	LEVEL_COUNTER += 1
-	LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
 	PackageHandler.handler()
-	refresh_question()
-	change_button_value()
-	enable_buttons()
-	scroll_text_label(question)
+	check_for_gameover()
+	if PackageHandler.gameover_condition == false:
+		LEVEL_COUNTER += 1
+		LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+		refresh_question()
+		change_button_value()
+		enable_buttons()
+		scroll_text_label(question)
 
 func _on_ready() -> void:
 	PackageHandler.handler()
+	check_for_gameover()
 	refresh_question()
 	change_button_value()
 	scroll_text_label(question)
@@ -110,6 +131,8 @@ func _on_timer_timeout() -> void:
 	seconds -= 1
 	if seconds >= 10:
 		TimeLabel.text = str(minutes)+":"+str(seconds)+" Left"
+	elif seconds < 0 and minutes < 0:
+		gameover()
 	else:
 		TimeLabel.text = str(minutes)+":0"+str(seconds)+" Left"
 

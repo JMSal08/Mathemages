@@ -2,8 +2,49 @@
 
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="1_5xmm1"]
 [ext_resource type="Script" uid="uid://orgf4lwqgyxt" path="res://scripts/game/game_scene.gd" id="1_omorx"]
+[ext_resource type="Texture2D" uid="uid://c4cmjq7uppkdd" path="res://images/game/button_image.png" id="3_ydf3n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xmm1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ydf3n"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06uhe"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gu01l"]
+texture = ExtResource("3_ydf3n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hqhf"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axn74"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxxt8"]
+texture = ExtResource("3_ydf3n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0de3"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecdjj"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hq7ie"]
+texture = ExtResource("3_ydf3n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6thfb"]
+texture = ExtResource("3_ydf3n")
+modulate_color = Color(1, 1, 1, 0.5019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q06b2"]
+texture = ExtResource("3_ydf3n")
 
 [node name="GameScene" type="Control" unique_id=812008187]
 layout_mode = 3
@@ -134,6 +175,9 @@ offset_top = 192.128
 offset_right = 1151.6799
 offset_bottom = 448.128
 theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ydf3n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_06uhe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gu01l")
 text = "123456789012345"
 
 [node name="BButton" type="Button" parent="QandAPanel" unique_id=1444514147]
@@ -148,6 +192,9 @@ offset_top = 192.12799
 offset_right = 1599.68
 offset_bottom = 448.128
 theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_6hqhf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_axn74")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fxxt8")
 text = "123456789012345"
 
 [node name="CButton" type="Button" parent="QandAPanel" unique_id=590428009]
@@ -162,6 +209,9 @@ offset_top = 512.128
 offset_right = 1151.68
 offset_bottom = 768.128
 theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_p0de3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecdjj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hq7ie")
 text = "123456789012345"
 
 [node name="DButton" type="Button" parent="QandAPanel" unique_id=1142888660]
@@ -176,6 +226,8 @@ offset_top = 512.128
 offset_right = 1599.68
 offset_bottom = 768.128
 theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_6thfb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q06b2")
 text = "123456789012345"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
