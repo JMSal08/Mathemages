@@ -18,6 +18,7 @@ func _on_button_pressed() -> void:
 		LabelAnimationPlayer.play("bounce")
 	else:
 		PackageHandler.gameover_condition = false
+		AudioPlayer.PlaySoundTrackOne()
 		TransitionScene.change_scene_to_file("res://scenes/game/game_scene.tscn")
 
 

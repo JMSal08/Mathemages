@@ -9,8 +9,8 @@ var choice_two
 var choice_three
 var choice_four
 var timer_value = 30 # Seconds
-var Dseconds = 15 # Seconds
-var Dminutes = 1 # Minutes
+var Dseconds = 0 # Seconds
+var Dminutes = 2 # Minutes
 
 var AGENT = AgentHandler.AGENT
 

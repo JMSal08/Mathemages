@@ -195,29 +195,64 @@ icon = ExtResource("3_hnmim")
 
 [node name="BackButton" type="Button" parent="." unique_id=1191213551]
 layout_mode = 0
-offset_left = 1112.0
-offset_top = 944.0
-offset_right = 1428.0
-offset_bottom = 1019.0
+offset_left = 1024.0
+offset_top = 984.0
+offset_right = 1340.0
+offset_bottom = 1059.0
 theme_override_font_sizes/font_size = 48
 text = "Go Back!"
 
 [node name="Button" type="Button" parent="." unique_id=1827276666]
 layout_mode = 0
-offset_left = 1456.0
-offset_top = 944.0
-offset_right = 1772.0
-offset_bottom = 1019.0
+offset_left = 1536.0
+offset_top = 984.0
+offset_right = 1852.0
+offset_bottom = 1059.0
 theme_override_font_sizes/font_size = 48
 text = "Let's Go!"
 
 [node name="Panel" type="Panel" parent="." unique_id=1670833244]
 layout_mode = 0
-offset_left = 904.0
-offset_top = 248.0
+offset_left = 1024.0
+offset_top = 192.0
 offset_right = 1856.0
-offset_bottom = 352.0
+offset_bottom = 320.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
+
+[node name="Label2" type="Label" parent="Panel" unique_id=2013401788]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 96
+text = "PH Name"
+
+[node name="Panel2" type="Panel" parent="." unique_id=376533179]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 328.0
+offset_right = 1856.0
+offset_bottom = 632.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=23638569]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Agent Information"
+
+[node name="Panel3" type="Panel" parent="." unique_id=1180676952]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 640.0
+offset_right = 1856.0
+offset_bottom = 880.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
+
+[node name="Label" type="Label" parent="Panel3" unique_id=1421860338]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Module Description"
 
 [node name="CharAnimationPlayer" type="AnimationPlayer" parent="." unique_id=296403669]
 libraries/ = SubResource("AnimationLibrary_ad4r8")
