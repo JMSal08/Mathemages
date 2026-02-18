@@ -44,6 +44,7 @@ func load_questions(file_path: String):
 	subject = data.get("subject", "")
 	questions = data.get("questions", [])
 	
+	question.clear()
 	answers.clear()
 	choices.clear()
 	
