@@ -1,6 +1,8 @@
 extends Button
 class_name SelectionItem
 
+@onready var PanelNode = $Panel
+@onready var ColorRectNode = $ColorRect
 @onready var RankLabel = $RankLabel
 @onready var TitleLabel = $TitleLabel
 @onready var FilePathLabel = $FilePathLabel
@@ -23,3 +25,6 @@ func _on_pressed() -> void:
 	print("pressed selectionlistitem")
 	PackageHandler.title = TitleLabel.text
 	PackageHandler.path_to_file = FilePathLabel.text
+	ColorRectNode.set_color(Color("d27d00"))
+	await get_tree().create_timer(0.25).timeout
+	ColorRectNode.set_color(Color("808080"))

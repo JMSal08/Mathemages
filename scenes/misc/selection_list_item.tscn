@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://byky56schudcc" path="res://scripts/misc/selection_list_item.gd" id="1_s8aos"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpx6t"]
-bg_color = Color(0.578394, 0.583627, 0.56991893, 1)
+bg_color = Color(0.5764706, 0.58431375, 0.5686275, 0)
 border_width_left = 175
 
 [node name="SelectionListItem" type="Button" unique_id=276075663]
@@ -22,6 +22,15 @@ offset_bottom = 192.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jpx6t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2072896897]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 1792.0
+offset_bottom = 192.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+color = Color(0.5019608, 0.5019608, 0.49803922, 1)
 
 [node name="RankLabel" type="Label" parent="." unique_id=1965318591]
 layout_mode = 0

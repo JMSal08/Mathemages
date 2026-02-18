@@ -35,4 +35,6 @@ func _on_pythabtn_pressed() -> void:
 
 
 func _on_back_button_pressed() -> void:
+	PackageHandler.title = ""
+	PackageHandler.path_to_file = ""
 	TransitionScene.change_scene_to_file("res://scenes/selection_page.tscn")

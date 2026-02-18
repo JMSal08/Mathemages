@@ -38,5 +38,8 @@ func _on_import_btn_pressed() -> void:
 
 
 func _on_start_game_btn_pressed() -> void:
-	PackageHandler.load_questions("placeholder")
-	TransitionScene.change_scene_to_file("res://scenes/game/agentSelection_page.tscn")
+	if PackageHandler.title == "" or PackageHandler.path_to_file == "":
+		pass
+	else:
+		PackageHandler.load_questions("placeholder")
+		TransitionScene.change_scene_to_file("res://scenes/game/agentSelection_page.tscn")
