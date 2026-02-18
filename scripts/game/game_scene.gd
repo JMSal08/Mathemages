@@ -22,6 +22,8 @@ var incorrect_counter = 0
 var seconds = 0
 var minutes = 0
 
+var is_paused = false
+
 @onready var AgentImg = $AgentImg
 @onready var LevelLabel = $LevelPanel/LevelLabel
 @onready var TextLabel = $TextPanel/TextLabel
@@ -124,17 +126,20 @@ func _on_ready() -> void:
 	AgentImg.texture = AgentHandler.get_agent_img(AGENT)
 
 func _on_timer_timeout() -> void:
-	if seconds == 0:
-		if minutes > 0:
-			minutes -= 1
-			seconds = 60
-	seconds -= 1
-	if seconds >= 10:
-		TimeLabel.text = str(minutes)+":"+str(seconds)+" Left"
-	elif seconds < 0 and minutes < 0:
-		gameover()
+	if is_paused:
+		pass
 	else:
-		TimeLabel.text = str(minutes)+":0"+str(seconds)+" Left"
+		if seconds == 0:
+			if minutes > 0:
+				minutes -= 1
+				seconds = 60
+		seconds -= 1
+		if seconds >= 10:
+			TimeLabel.text = str(minutes)+":"+str(seconds)+" Left"
+		elif seconds == 0 and minutes == 0:
+			gameover()
+		else:
+			TimeLabel.text = str(minutes)+":0"+str(seconds)+" Left"
 
 func reset_timer():
 	seconds=Dseconds
@@ -161,6 +166,13 @@ func pause_timer() -> void:
 	pass
 
 # BELOW ARE CODE FOR BUTTONS
+func _on_pause_button_pressed() -> void:
+	if is_paused:
+		is_paused = false
+	else:
+		is_paused = true
+
+
 func _on_a_button_pressed() -> void:
 	if AButton.text.to_upper() == answer.to_upper():
 		correct()

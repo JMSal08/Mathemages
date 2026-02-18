@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_6hqhf"]
 [ext_resource type="Texture2D" uid="uid://c4cmjq7uppkdd" path="res://images/game/button_image.png" id="3_ydf3n"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hqhf"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xmm1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ydf3n"]
@@ -73,11 +75,18 @@ offset_bottom = 128.0
 layout_mode = 0
 offset_left = 64.0
 offset_top = 16.0
-offset_right = 568.0
+offset_right = 576.0
 offset_bottom = 115.0
 theme_override_fonts/font = ExtResource("3_6hqhf")
 theme_override_font_sizes/font_size = 72
 text = "Agent - Level 1"
+horizontal_alignment = 1
+
+[node name="PauseButton" type="Button" parent="LevelPanel" unique_id=1454342165]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 128.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6hqhf")
 
 [node name="TextPanel" type="Panel" parent="." unique_id=29128040]
 layout_mode = 1
@@ -131,7 +140,7 @@ offset_top = 128.0
 offset_right = 1920.0
 offset_bottom = 832.0
 
-[node name="Label" type="Label" parent="PowerUpsPanel" unique_id=52276929]
+[node name="PowerUpsTitle" type="Label" parent="PowerUpsPanel" unique_id=52276929]
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 56.0
@@ -139,6 +148,18 @@ theme_override_fonts/font = ExtResource("3_6hqhf")
 theme_override_font_sizes/font_size = 40
 text = "Powerups"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PowerUpsPanel" unique_id=2082577135]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 320.4651
+rotation = 1.5707964
+theme_override_font_sizes/font_size = 60
+text = "Work in Progress"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PointsPanel" type="Panel" parent="." unique_id=1766371229]
 layout_mode = 0
@@ -244,6 +265,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_q06b2")
 text = "123456789012345"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="LevelPanel/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="timeout" from="TimePanel/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="QandAPanel/AButton" to="." method="_on_a_button_pressed"]
 [connection signal="pressed" from="QandAPanel/BButton" to="." method="_on_b_button_pressed"]
