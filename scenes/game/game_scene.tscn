@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://wnbxgvwxtxxf" path="res://char/eadler/img/eadler.png" id="1_5xmm1"]
 [ext_resource type="Script" uid="uid://orgf4lwqgyxt" path="res://scripts/game/game_scene.gd" id="1_omorx"]
+[ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="3_6hqhf"]
 [ext_resource type="Texture2D" uid="uid://c4cmjq7uppkdd" path="res://images/game/button_image.png" id="3_ydf3n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xmm1"]
@@ -74,6 +75,7 @@ offset_left = 64.0
 offset_top = 16.0
 offset_right = 568.0
 offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("3_6hqhf")
 theme_override_font_sizes/font_size = 72
 text = "Agent - Level 1"
 
@@ -114,6 +116,7 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 448.0
 offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("3_6hqhf")
 theme_override_font_sizes/font_size = 90
 text = "1:07 Left"
 horizontal_alignment = 1
@@ -128,6 +131,15 @@ offset_top = 128.0
 offset_right = 1920.0
 offset_bottom = 832.0
 
+[node name="Label" type="Label" parent="PowerUpsPanel" unique_id=52276929]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("3_6hqhf")
+theme_override_font_sizes/font_size = 40
+text = "Powerups"
+horizontal_alignment = 1
+
 [node name="PointsPanel" type="Panel" parent="." unique_id=1766371229]
 layout_mode = 0
 offset_left = 1408.0
@@ -138,6 +150,7 @@ offset_bottom = 128.0
 layout_mode = 0
 offset_right = 512.0
 offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("3_6hqhf")
 theme_override_font_sizes/font_size = 90
 text = "0 Points"
 horizontal_alignment = 1
