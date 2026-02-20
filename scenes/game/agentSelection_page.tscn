@@ -307,7 +307,7 @@ text = "Let's Go!"
 layout_mode = 0
 offset_left = 2000.0
 offset_top = 192.0
-offset_right = 2831.9521
+offset_right = 2831.9512
 offset_bottom = 320.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4s2py")
 
@@ -323,7 +323,7 @@ text = "Agent Select"
 layout_mode = 0
 offset_left = 2000.0
 offset_top = 328.0
-offset_right = 2831.981
+offset_right = 2831.9812
 offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pd6bt")
 

@@ -29,14 +29,14 @@ func _on_eadlerbtn_pressed() -> void:
 	CharFrame.texture = eadlerpic
 	AgentHandler.AGENT = "Eadler"
 	CharAnimationPlayer.play("popd")
-	NameLabel.text = "Eadler"
+	NameLabel.text = AgentHandler.AGENT
 
 
 func _on_pythabtn_pressed() -> void:
 	CharFrame.texture = pythapic
 	AgentHandler.AGENT = "Pytha"
 	CharAnimationPlayer.play("popd")
-	NameLabel.text = "Pytha"
+	NameLabel.text = AgentHandler.AGENT
 
 
 func _on_back_button_pressed() -> void:
