@@ -2,13 +2,16 @@ extends Control
 
 @onready var CharAnimationPlayer = $CharAnimationPlayer
 @onready var LabelAnimationPlayer = $LabelAnimationPlayer
+@onready var InfoAnimationPlayer = $InfoAnimationPlayer
 @onready var CharFrame = $CharFrame
+@onready var NameLabel = $NamePanel/NameLabel
 var eadlerpic = load("res://char/eadler/img/eadler.png")
 var pythapic = load("res://char/pytha/img/pytha.png")
 
 func _on_ready() -> void:
 	AgentHandler.AGENT = ""
 	await get_tree().create_timer(1).timeout
+	InfoAnimationPlayer.play("Entry")
 	LabelAnimationPlayer.play("LabelAnimation")
 
 
@@ -26,12 +29,14 @@ func _on_eadlerbtn_pressed() -> void:
 	CharFrame.texture = eadlerpic
 	AgentHandler.AGENT = "Eadler"
 	CharAnimationPlayer.play("popd")
+	NameLabel.text = "Eadler"
 
 
 func _on_pythabtn_pressed() -> void:
 	CharFrame.texture = pythapic
 	AgentHandler.AGENT = "Pytha"
 	CharAnimationPlayer.play("popd")
+	NameLabel.text = "Pytha"
 
 
 func _on_back_button_pressed() -> void:
