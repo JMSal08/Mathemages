@@ -17,6 +17,7 @@ var AGENT = AgentHandler.AGENT
 var LEVEL_COUNTER = 1
 var correct_counter = 0
 var incorrect_counter = 0
+var POINT_COUNTER = 0
 
 # TIMER COUNTER
 var seconds = 0
@@ -28,6 +29,7 @@ var is_paused = false
 @onready var LevelLabel = $LevelPanel/LevelLabel
 @onready var TextLabel = $TextPanel/TextLabel
 @onready var TimeLabel = $TimePanel/TimeLabel
+@onready var PointsLabel = $PointsPanel/PointsLabel
 @onready var AButton = $QandAPanel/AButton
 @onready var BButton = $QandAPanel/BButton
 @onready var CButton = $QandAPanel/CButton
@@ -44,9 +46,8 @@ func gameover():
 	print("levels: " + str(LEVEL_COUNTER))
 	print("correct: " + str(correct_counter))
 	print("incorrect: " + str(incorrect_counter))
+	Results.results(LEVEL_COUNTER, POINT_COUNTER)
 	TransitionScene.change_scene_to_file("res://scenes/game/gameover_scene.tscn")
-	await get_tree().create_timer(5).timeout
-	print("gameover")
 
 
 func refresh_question() -> void:
@@ -94,7 +95,9 @@ func correct():
 	check_for_gameover()
 	if PackageHandler.gameover_condition == false:
 		LEVEL_COUNTER += 1
+		POINT_COUNTER += AgentHandler.points_per_question
 		LevelLabel.text = AGENT + " - Level " + str(LEVEL_COUNTER)
+		PointsLabel.text = str(POINT_COUNTER) + " Points"
 		refresh_question()
 		change_button_value()
 		enable_buttons()

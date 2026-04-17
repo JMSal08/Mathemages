@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://dwu4rlwkhcwgu"]
 
+[ext_resource type="Script" uid="uid://bfkn0iu8br0x7" path="res://scripts/game/gameover_scene.gd" id="1_dgskr"]
+[ext_resource type="FontFile" uid="uid://cro0ihcubbiiq" path="res://font/CaesarDressing-Regular.ttf" id="2_jyni4"]
+[ext_resource type="Texture2D" uid="uid://ds53rrxmagcyt" path="res://images/bg/blackscreen.jpg" id="2_oga7t"]
+
 [node name="GameoverScene" type="Control" unique_id=1557128969]
 layout_mode = 3
 anchors_preset = 15
@@ -7,13 +11,72 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dgskr")
 
-[node name="Label" type="Label" parent="." unique_id=592870626]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=542440346]
 layout_mode = 0
-offset_left = 592.0
-offset_top = 152.0
-offset_right = 1411.0
-offset_bottom = 331.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_oga7t")
+
+[node name="CharFrame" type="TextureRect" parent="." unique_id=718269879]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 328.0
+offset_right = 1336.0
+offset_bottom = 1728.0
+scale = Vector2(0.5, 0.5)
+
+[node name="level" type="Label" parent="." unique_id=592870626]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -408.0
+offset_top = 240.0
+offset_right = 411.0
+offset_bottom = 319.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_jyni4")
 theme_override_font_sizes/font_size = 64
-text = "RESULTS WILL SHOW HERE
-WORK IN PROGRESS"
+text = "Level: 0"
+
+[node name="score" type="Label" parent="." unique_id=138729602]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -408.0
+offset_top = 368.0
+offset_right = 411.0
+offset_bottom = 447.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_jyni4")
+theme_override_font_sizes/font_size = 64
+text = "Score: 0"
+
+[node name="agent" type="Label" parent="." unique_id=1523144447]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -408.0
+offset_top = 496.0
+offset_right = 411.0
+offset_bottom = 575.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_jyni4")
+theme_override_font_sizes/font_size = 64
+text = "Instructor: 0"
+
+[node name="MainMenu" type="Button" parent="." unique_id=860525644]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 896.0
+offset_right = 1290.0
+offset_bottom = 1024.0
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
